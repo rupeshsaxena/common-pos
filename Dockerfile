@@ -1,5 +1,14 @@
-FROM openjdk:17-jdk-slim
+FROM openjdk:17-jdk-alpine 
+
 WORKDIR /app
-COPY target/*.jar app.jar
+
+COPY .mvn/ .mvn
+COPY mvnw pom.xml ./
+RUN ./mvnw dependency:go-offline
+
+COPY src ./src
+RUN ./mvnw package -DskipTests
+
 EXPOSE 8080
-ENTRYPOINT [ "java", "-jar", "app.jar" ]
+
+ENTRYPOINT ["java","-jar","target/common-pos-0.0.1-SNAPSHOT.jar"] 
