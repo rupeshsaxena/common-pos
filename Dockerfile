@@ -1,11 +1,12 @@
 FROM openjdk:17-jdk-alpine 
 
 WORKDIR /app
-RUN chmod +x mvnw
+
 COPY .mvn/ .mvn
 COPY mvnw pom.xml ./
 
 COPY src ./src
+RUN chmod a+x mvnw
 RUN ./mvnw package -DskipTests
 
 EXPOSE 8080
