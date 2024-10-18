@@ -3,7 +3,7 @@ name: Build and Push Config Server Docker Image
 on:
   push:
     branches:
-      - develop  # Trigger on pushes to the main branch
+      - deevlop  # Trigger on pushes to the main branch
 
 jobs:
   build-and-push:
