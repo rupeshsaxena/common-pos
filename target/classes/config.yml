@@ -1,0 +1,25 @@
+endpoints:
+  stage:
+    base-url: http://192.168.1.4:8080
+    core: 
+      uri: /v1/core
+    config:
+      uri: /v1/config
+    provisioning:
+      uri: /v1/provisioning
+  dev:
+    base-url: http://192.168.1.4:8080
+    core: 
+      uri: /v1/core
+    config:
+      uri: /v1/config
+    provisioning:
+      uri: /v1/provisioning
+  prod:
+    base-url: http://192.168.1.4:8080
+    core: 
+      uri: /v1/core
+    config:
+      uri: /v1/config
+    provisioning:
+      uri: /v1/provisioning

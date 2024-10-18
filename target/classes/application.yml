@@ -1,0 +1,12 @@
+server:
+    port: 8081
+spring:
+    profiles:
+      active: native
+    
+    cloud:
+        config:
+            server:
+                native:
+                    default-label: common-pos
+                    version: 1.0
