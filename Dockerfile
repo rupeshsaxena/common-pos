@@ -1,7 +1,7 @@
 FROM openjdk:17-jdk-alpine 
 
 WORKDIR /app
-
+RUN chmod +x /.mvnw
 COPY .mvn/ .mvn
 COPY mvnw pom.xml ./
 
